@@ -1,0 +1,16 @@
+{
+  "name": "mehmetdedeler",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000 --host",
+    "build": "vite build",
+    "preview": "vite preview --port 3000",
+    "deploy": "vite build && wrangler deploy"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0",
+    "wrangler": "^4.140.0"
+  }
+}
