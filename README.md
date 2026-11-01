@@ -1,6 +1,6 @@
 # mehmetdedeler.com
 
-My personal site: one HTML page, no JavaScript. Served by Cloudflare Workers.
+The personal site of [Mehmet Dedeler](https://mehmetdedeler.com): one HTML page, no JavaScript. Served by Cloudflare Workers.
 
 ```bash
 npm install
