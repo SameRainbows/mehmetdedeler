@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mehmet Dedeler — Building Typd and Kairos</title>
-<meta name="description" content="Mehmet Dedeler is 14 and makes apps, simulations and tools. Typd: voice dictation that runs on your computer. Kairos: 6,500 quotes, in testing on Google Play. Tally: counts reps in the browser. Orbital and Formicai: released for Windows, macOS and Linux.">
+<title>Mehmet Dedeler — Building Typd</title>
+<meta name="description" content="Mehmet Dedeler is 14 and builds apps, simulations and tools: Typd local voice dictation, Kairos sourced quotes, Tally browser rep counter and Orbital.">
 <link rel="canonical" href="https://mehmetdedeler.com/">
 <link rel="me" href="https://github.com/SameRainbows">
 <meta name="author" content="Mehmet Dedeler">
-<meta property="og:title" content="Mehmet Dedeler — Building Typd and Kairos">
-<meta property="og:description" content="Apps, simulations and tools: Typd, Kairos, Tally, Orbital and Formicai.">
+<meta property="og:title" content="Mehmet Dedeler — Building Typd">
+<meta property="og:description" content="Apps, simulations and tools: Typd, Kairos, Tally and Orbital.">
 <meta property="og:url" content="https://mehmetdedeler.com/">
 <meta property="og:type" content="website">
 <meta name="color-scheme" content="light dark">
@@ -24,19 +24,16 @@
   "name": "Mehmet Dedeler",
   "url": "https://mehmetdedeler.com/",
   "email": "mailto:mehmet@mehmetdedeler.com",
-  "description": "Mehmet Dedeler is 14 and makes apps, simulations and tools, including Typd, Kairos, Tally, Orbital and Formicai.",
+  "description": "Mehmet Dedeler is 14 and builds apps, simulations and tools, including Typd, Kairos, Tally and Orbital.",
   "knowsAbout": ["Speech recognition", "Machine learning", "Simulation", "Software development"],
   "sameAs": [
-    "https://github.com/SameRainbows",
-    "https://typd.mehmetdedeler.com/",
-    "https://tally.mehmetdedeler.com/"
+    "https://github.com/SameRainbows"
   ],
   "owns": [
     {"@type": "SoftwareApplication", "name": "Typd", "url": "https://typd.mehmetdedeler.com/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Windows, macOS"},
     {"@type": "SoftwareApplication", "name": "Kairos", "applicationCategory": "BooksApplication", "operatingSystem": "Android"},
     {"@type": "WebApplication", "name": "Tally", "url": "https://tally.mehmetdedeler.com/", "applicationCategory": "HealthApplication"},
-    {"@type": "SoftwareApplication", "name": "Orbital", "url": "https://github.com/SameRainbows/Orbital", "applicationCategory": "EducationalApplication", "operatingSystem": "Windows, macOS, Linux"},
-    {"@type": "SoftwareApplication", "name": "Formicai", "url": "https://github.com/SameRainbows/Formicai", "applicationCategory": "EducationalApplication", "operatingSystem": "Windows, macOS, Linux"}
+    {"@type": "SoftwareApplication", "name": "Orbital", "url": "https://github.com/SameRainbows/Orbital", "applicationCategory": "EducationalApplication", "operatingSystem": "Windows, macOS, Linux"}
   ]
 }
 </script>
@@ -44,20 +41,22 @@
   :root { --ink: #1b1b1b; --muted: #6b6b6b; --line: #e4e4e4; --link: #1d4ed8; --bg: #fff; }
   @media (prefers-color-scheme: dark) { :root { --ink: #ececec; --muted: #9a9a9a; --line: #2c2c2c; --link: #8fb0ff; --bg: #111; } }
   html { background: var(--bg); color: var(--ink); }
-  body { margin: 0 auto; max-width: 36rem; padding: 4.5rem 1.25rem 4rem; font: 18px/1.6 Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif; }
+  body { margin: 0 auto; max-width: 36rem; padding: clamp(2.5rem, 8vw, 4.5rem) 1.25rem 4rem; font: 18px/1.6 Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif; }
   h1 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 .5rem; }
   h2 { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: normal; margin: 3rem 0 1rem; }
   p { margin: 0 0 1rem; }
   a { color: var(--link); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
   .projects { list-style: none; margin: 0; padding: 0; }
   .projects li { padding: 1rem 0; border-top: 1px solid var(--line); }
   .projects li:last-child { border-bottom: 1px solid var(--line); }
-  .head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
+  .projects li > p:last-child { margin-bottom: 0; }
+  .head { display: flex; justify-content: space-between; gap: .25rem 1rem; align-items: baseline; flex-wrap: wrap; }
   .name { font-weight: bold; }
-  .year, .proof, .links, footer { color: var(--muted); font-size: .85rem; }
+  .meta, .proof, .links, footer { color: var(--muted); font-size: .85rem; }
   .what { margin: .2rem 0 .3rem; }
   .proof { margin: 0 0 .3rem; }
-  .links a { margin-right: .9rem; }
+  .links { display: flex; flex-wrap: wrap; gap: .25rem .9rem; margin: 0; }
   .now { margin: 0; padding-left: 1.1rem; }
   .now li { margin-bottom: .4rem; }
   footer { margin-top: 3rem; }
@@ -66,40 +65,34 @@
 <body>
 <header>
   <h1>Mehmet Dedeler</h1>
-  <p>I'm 14, making apps, simulations and tools. Here are the five biggest.</p>
+  <p>I'm 14, building apps, simulations and tools.</p>
 </header>
 
 <main>
 <h2>Projects</h2>
 <ol class="projects">
   <li>
-    <div class="head"><a class="name" href="https://typd.mehmetdedeler.com">Typd</a><span class="year">2026</span></div>
-    <p class="what">Voice dictation for Windows and Apple-silicon Macs. One small model on your computer hears you and writes the finished text. After a one-time model download it works offline, and your voice leaves the computer only if you choose to share it.</p>
-    <p class="proof">Free, and the app is open source. On 70 real dictations of my own, scored against texts written in Typd's style, Typd got 4.2% of the spoken words wrong and Wispr Flow got 6.1%. One speaker is a small sample.</p>
-    <p class="links"><a href="https://typd.mehmetdedeler.com/download/">Download</a><a href="https://typd.mehmetdedeler.com">Details and results</a><a href="https://github.com/SameRainbows/typd-app">Code</a></p>
+    <div class="head"><a class="name" href="https://typd.mehmetdedeler.com">Typd</a><span class="meta">Windows · macOS</span></div>
+    <p class="what">Voice dictation for Windows (NVIDIA GPU) and Apple-silicon Macs. A single local model hears you and writes the finished text — no second model to clean it up. After a one-time model download it works offline, and your voice leaves the computer only if you choose to share it.</p>
+    <p class="proof">Free, and the app is open source. Built on Qwen3-ASR 1.7B fine-tuned for dictation, running in llama.cpp (~0.5 s on short dictations on a 4 GB laptop).</p>
+    <p class="links"><a href="https://typd.mehmetdedeler.com/download/">Download</a><a href="https://typd.mehmetdedeler.com/how-we-tested/">Where it stands</a><a href="https://github.com/SameRainbows/typd-app">Code</a></p>
   </li>
   <li>
-    <div class="head"><a class="name" href="mailto:mehmet@mehmetdedeler.com?subject=Kairos%20testing">Kairos</a><span class="year">2026</span></div>
+    <div class="head"><span class="name">Kairos</span><span class="meta">Android · Testing</span></div>
     <p class="what">An Android app for reading quotes, each one credited to a source you can check.</p>
     <p class="proof">6,500 quotes, 1,100 checked word for word against the original books. In closed testing on Google Play; <a href="mailto:mehmet@mehmetdedeler.com?subject=Kairos%20testing">email me</a> to join.</p>
   </li>
   <li>
-    <div class="head"><a class="name" href="https://tally.mehmetdedeler.com">Tally</a><span class="year">2026</span></div>
+    <div class="head"><a class="name" href="https://tally.mehmetdedeler.com">Tally</a><span class="meta">Web</span></div>
     <p class="what">Counts your reps through your camera, in the browser. Nothing is uploaded.</p>
-    <p class="proof">Nine exercises, counted on your device.</p>
-    <p class="links"><a href="https://tally.mehmetdedeler.com">Try it</a><a href="https://github.com/SameRainbows/Tally">Code</a></p>
+    <p class="proof">Nine exercises, tracked with an on-device pose model. If a rep doesn't count, it says why.</p>
+    <p class="links"><a href="https://tally.mehmetdedeler.com">Try it</a><a href="https://tally.mehmetdedeler.com/count/squats?demo">Demo (no camera)</a><a href="https://github.com/SameRainbows/Tally">Code</a></p>
   </li>
   <li>
-    <div class="head"><a class="name" href="https://github.com/SameRainbows/Orbital">Orbital</a><span class="year">2026</span></div>
-    <p class="what">A gravity sandbox in Python. Slingshot planets and the orbits come from gravity alone.</p>
-    <p class="proof">Released for Windows, macOS and Linux (v1.0.2).</p>
+    <div class="head"><a class="name" href="https://github.com/SameRainbows/Orbital">Orbital</a><span class="meta">Python · Desktop</span></div>
+    <p class="what">A gravity sandbox built with only Python's standard library — no physics engine. Slingshot planets and the orbits come from gravity alone.</p>
+    <p class="proof">Continuous collision detection and momentum conservation. Released for Windows, macOS and Linux (v1.0.2).</p>
     <p class="links"><a href="https://github.com/SameRainbows/Orbital/releases/latest">Download</a><a href="https://github.com/SameRainbows/Orbital">Code</a></p>
-  </li>
-  <li>
-    <div class="head"><a class="name" href="https://github.com/SameRainbows/Formicai">Formicai</a><span class="year">2026</span></div>
-    <p class="what">Ant colonies whose behaviour is evolved, not programmed. Each ant runs a small neural network.</p>
-    <p class="proof">Released for Windows, macOS and Linux (v1.2).</p>
-    <p class="links"><a href="https://github.com/SameRainbows/Formicai/releases/latest">Download</a><a href="https://github.com/SameRainbows/Formicai">Code</a></p>
   </li>
 </ol>
 
